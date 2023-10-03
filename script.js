@@ -5,7 +5,9 @@ let taskSpace = document.getElementById('task-space');
 
 addbtn.addEventListener('click', function(){
     let value = taskInput.value.trim(); // using trim for remove extra spaces when the value is empty
-    taskInput.value = ''; 
+   
+    taskInput.value = '';
+
     if (value != '') {
         addTask(value); 
     }
@@ -13,30 +15,45 @@ addbtn.addEventListener('click', function(){
 
 function addTask(value) {
     let listItem = document.createElement('h4'); // Create a new list item
+
     let actionContainer = document.createElement('div'); // Create a new div for btn and check
+    
     let deleteButton = document.createElement('button'); // Create a new delete button
+    
     let checkbox = document.createElement('input'); // Create a new checkbox
+    
     checkbox.type = 'checkbox';
 
     
     // Adding the content
     deleteButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+
     listItem.textContent = value;
+
     let successMsg = document.createElement('p');
+
     successMsg.textContent = 'The task has been completed';
+
     successMsg.style.display = 'none';
     
     // Create classes for styling
     deleteButton.className = 'delete-btn btn';
+
     listItem.className = 'task-list';
+
     checkbox.className = 'checkbox';
+
     actionContainer.className = 'action-container';
+
     successMsg.className = 'success-msg';
     
     // Append the checkbox, list item, and delete button in the desired order
     listItem.appendChild(actionContainer);
+
     actionContainer.appendChild(checkbox);
+
     actionContainer.appendChild(deleteButton);
+
     listItem.appendChild(successMsg);
    
 
@@ -50,10 +67,13 @@ function addTask(value) {
 
     //function for checkbox
     checkbox.addEventListener('change', function(){
+
         if (checkbox.checked) {
             // Show the success message when the checkbox is checked
             successMsg.style.display = 'block';
-        } else {
+        } 
+        else
+         {
             // Hide the success message when the checkbox is unchecked
             successMsg.style.display = 'none';
         }

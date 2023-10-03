@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Karla:wght@300&family=Libre+Franklin&family=Noto+Serif:wght@500&family=Nunito:wght@300&family=Poppins:wght@300&family=Roboto+Slab&family=Shadows+Into+Light&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -31,7 +30,6 @@
     color: #716455;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-
 #task-space{
     background-color: #F8F0E5;
     height: 18rem;
@@ -53,7 +51,7 @@
     color: #F8F0E5;
     padding: 2px 10px;
 }
-/*-----------------------------------list of adding items from jss files--------------------------------*/
+/*---------list of adding items from jss files---------*/
 .task-list{
     font-size: 12px;
     border-bottom: #716455 1px solid;
@@ -80,46 +78,27 @@
     width: 20px;
     height: 20px;
 }
-
-
 .success-msg {
     display: block;
     font-size: 10px;
     color: green;
-    font-weight: bold;
 }
-
-
 @media screen and (max-width: 480px) {
-    .cont h1 {
-        font-size: 40px;
-    }
-
     .todo-list {
         padding: 10px 10px;
         margin: 0;
     }
-
 }
-
-/* Media query for screens with a minimum width of 769px (typical for desktop devices) */
 @media screen and (max-width: 830px){
-    .cont h1 {
-        font-size: 60px; /* Adjust font size for larger screens */
-    }
-
     .todo-list {
        padding: 1.5rem 2rem;
        width: 90%;
     }
-
     #task-space {
         height: 22rem;
         width: 100%;
-    
     }
     .task-list{
         font-size: 20px;
     }
-    
 }
